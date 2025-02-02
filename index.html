@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
             text-align: center;
         }
         header {
@@ -19,23 +19,27 @@
             font-size: 24px;
         }
         .container {
-            width: 50%;
+            width: 40%;
             margin: auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
-        label, input, textarea, select {
+        label, input, textarea {
             display: block;
-            width: 100%;
-            margin-bottom: 10px;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 15px;
         }
-        input, textarea, select {
-            padding: 8px;
+        input, textarea {
+            padding: 16px;
             border: 1px solid #ccc;
             border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
         }
         button {
             background-color: #28a745;
@@ -44,9 +48,15 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            width: 70%;
         }
         button:hover {
             background-color: #218838;
+        }
+        .response-time {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
         }
         footer {
             margin-top: 20px;
@@ -62,45 +72,59 @@
     </header>
     <div class="container">
         <h2>Kontakt</h2>
-        <p>Email: odhadce@email.cz</p>
-        <p>Telefon: +420 123 456 789</p>
+        <p>Ing. Tereza Toufarová</p>
+        <p>Email: tereza@toufarova.com</p>
+        <p>Telefon: +420 731 406 935</p>
+        <p>Praha a střední Čechy</p>
     </div>
     <div class="container">
         <h2>Poptávkový formulář</h2>
-        <form id="requestForm">
+        <form id="requestForm" action="send_mail.php" method="POST">
             <label for="name">Jméno a příjmení:</label>
-            <input type="text" id="name" required>
+            <input type="text" name="name" required>
             
             <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" required>
+            <input type="tel" name="phone" required>
             
             <label for="email">E-mail:</label>
-            <input type="email" id="email" required>
+            <input type="email" name="email" required>
             
             <label for="reason">Důvod odhadu:</label>
-            <textarea id="reason" rows="3" required></textarea>
+            <textarea name="reason" required></textarea>
             
             <label for="propertyType">Typ nemovitosti:</label>
-            <select id="propertyType">
-                <option value="byt">Byt</option>
-                <option value="dum">Dům</option>
-            </select>
+            <input type="text" name="propertyType" required>
             
             <label for="location">Lokalita:</label>
-            <input type="text" id="location" required>
+            <input type="text" name="location" required>
             
             <button type="submit">Odeslat poptávku</button>
+            <p class="response-time">Odpovím do 24 hodin.</p>
         </form>
     </div>
     <footer>
         &copy; 2025 Odhadce nemovitostí
     </footer>
-
-    <script>
-        document.getElementById('requestForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Formulář byl úspěšně odeslán!');
-        });
-    </script>
 </body>
 </html>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST["name"]);
+    $phone = htmlspecialchars($_POST["phone"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $reason = htmlspecialchars($_POST["reason"]);
+    $propertyType = htmlspecialchars($_POST["propertyType"]);
+    $location = htmlspecialchars($_POST["location"]);
+
+    $to = "tereza@toufarova.com";
+    $subject = "Nová poptávka odhadce nemovitostí";
+    $message = "Jméno: $name\nTelefon: $phone\nE-mail: $email\n\nDůvod odhadu:\n$reason\n\nTyp nemovitosti:\n$propertyType\nLokalita:\n$location";
+    $headers = "From: $email\r\nReply-To: $email";
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Vaše poptávka byla úspěšně odeslána.";
+    } else {
+        echo "Při odesílání došlo k chybě. Zkuste to prosím znovu.";
+    }
+}
+?>
