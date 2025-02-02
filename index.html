@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesionální odhady nemovitostí v Praze a středních Čechách. Kontaktujte Ing. Terezu Toufarovou.">
     <title>Odhadce nemovitostí</title>
     <style>
         body {
@@ -18,8 +19,32 @@
             padding: 20px;
             font-size: 24px;
         }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
         .container {
-            width: 40%;
+            width: 90%;
+            max-width: 500px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -27,36 +52,17 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
-        label, input, textarea {
-            display: block;
-            width: 70%;
+        .reviews, .pricing {
+            max-width: 700px;
             margin: auto;
+            text-align: left;
+        }
+        .review {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #28a745;
             margin-bottom: 15px;
-        }
-        input, textarea {
-            padding: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        textarea {
-            height: 100px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 70%;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .response-time {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
+            border-radius: 5px;
         }
         footer {
             margin-top: 20px;
@@ -64,67 +70,64 @@
             background: #333;
             color: white;
         }
+        .form-container {
+            width: 100%;
+            max-width: 640px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
     <header>
         Odhadce nemovitostí - Profesionální ocenění vašich nemovitostí
     </header>
-    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#cenik">Odhady</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#recenze">Recenze</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" id="cenik">
+        <h2>Ceník odhadů</h2>
+        <div class="pricing">
+            <p><strong>Odhad bytu:</strong> od 3 500 Kč</p>
+            <p><strong>Odhad rodinného domu:</strong> od 5 500 Kč</p>
+            <p><strong>Odhad pozemku:</strong> od 4 000 Kč</p>
+            <p><strong>Konzultace:</strong> 1 000 Kč/hod</p>
+        </div>
+    </div>
+    
+    <div class="container" id="kontakt">
         <h2>Kontakt</h2>
-        <p>Ing. Tereza Toufarová</p>
-        <p>Email: tereza@toufarova.com</p>
-        <p>Telefon: +420 731 406 935</p>
+        <p><strong>Ing. Tereza Toufarová</strong></p>
+        <p>Email: <a href="mailto:tereza@toufarova.com">tereza@toufarova.com</a></p>
+        <p>Telefon: <a href="tel:+420731406935">+420 731 406 935</a></p>
         <p>Praha a střední Čechy</p>
     </div>
-    <div class="container">
+    <div class="form-container">
         <h2>Poptávkový formulář</h2>
-        <form id="requestForm" action="send_mail.php" method="POST">
-            <label for="name">Jméno a příjmení:</label>
-            <input type="text" name="name" required>
-            
-            <label for="phone">Telefon:</label>
-            <input type="tel" name="phone" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" required>
-            
-            <label for="reason">Důvod odhadu:</label>
-            <textarea name="reason" required></textarea>
-            
-            <label for="propertyType">Typ nemovitosti:</label>
-            <input type="text" name="propertyType" required>
-            
-            <label for="location">Lokalita:</label>
-            <input type="text" name="location" required>
-            
-            <button type="submit">Odeslat poptávku</button>
-            <p class="response-time">Odpovím do 24 hodin.</p>
-        </form>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSdEnQ4Vp8xkdWWZKCpXYkQN0gfHQZ3za6e-f0pOc0uo31Hw/viewform?embedded=true" width="640" height="1094" frameborder="0" marginheight="0" marginwidth="0">Načítání…</iframe>
     </div>
+    
+    <div class="container" id="recenze">
+        <h2>Recenze zákazníků</h2>
+        <div class="reviews">
+            <div class="review">
+                <p><strong>Jana K.</strong>: Skvělý a rychlý servis. Odhad byl přesný a profesionální.</p>
+            </div>
+            <div class="review">
+                <p><strong>Martin P.</strong>: Velmi milý přístup a rychlé jednání. Doporučuji!</p>
+            </div>
+            <div class="review">
+                <p><strong>Eva L.</strong>: Profesionální a spolehlivá služba. Odhad mi pomohl při prodeji nemovitosti.</p>
+            </div>
+        </div>
+    </div>
+    
     <footer>
         &copy; 2025 Odhadce nemovitostí
     </footer>
 </body>
 </html>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST["name"]);
-    $phone = htmlspecialchars($_POST["phone"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $reason = htmlspecialchars($_POST["reason"]);
-    $propertyType = htmlspecialchars($_POST["propertyType"]);
-    $location = htmlspecialchars($_POST["location"]);
-
-    $to = "tereza@toufarova.com";
-    $subject = "Nová poptávka odhadce nemovitostí";
-    $message = "Jméno: $name\nTelefon: $phone\nE-mail: $email\n\nDůvod odhadu:\n$reason\n\nTyp nemovitosti:\n$propertyType\nLokalita:\n$location";
-    $headers = "From: $email\r\nReply-To: $email";
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Vaše poptávka byla úspěšně odeslána.";
-    } else {
-        echo "Při odesílání došlo k chybě. Zkuste to prosím znovu.";
-    }
-}
-?>
