@@ -107,29 +107,117 @@
         <p>Telefon: <a href="tel:+420731406935">+420 731 406 935</a></p>
         <p>Praha a střední Čechy</p>
     </div>
-    <div class="form-container">
-        <h2>Poptávkový formulář</h2>
-            <form action="https://formspree.io/f/xwpvbzlb" method="POST">
-  <label for="name">Jméno a příjmení:</label>
-  <input type="text" id="name" name="name" required>
+    <!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poptávkový formulář</title>
+  <style>
+    /* Globální styl pro celou stránku */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" required>
+    /* Formulářový box */
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
 
-  <label for="phone">Telefonní číslo:</label>
-  <input type="tel" id="phone" name="phone" required>
+    /* Titulek formuláře */
+    .form-container h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-  <label for="message">Důvod odhadu:</label>
-  <textarea id="message" name="message" required></textarea>
+    /* Všechny labely */
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
+    }
 
-  <label for="description">Popis nemovitosti:</label>
-  <textarea id="description" name="description" required></textarea>
+    /* Vstupní pole a textarea */
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
 
-  <label for="location">Lokalita:</label>
-  <input type="text" id="location" name="location" required>
+    /* Tlačítko odeslání */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
 
-  <button type="submit">Odeslat poptávku</button>
-</form>
+    /* Efekt při najetí na tlačítko */
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Styl pro odpovědi a upozornění */
+    .form-container .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Poptávkový formulář</h1>
+
+    <form action="https://formspree.io/f/xwpvbzlb" method="POST">
+      <label for="name">Jméno a příjmení:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Telefonní číslo:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Důvod odhadu:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <label for="description">Popis nemovitosti:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="location">Lokalita:</label>
+      <input type="text" id="location" name="location" required>
+
+      <button type="submit">Odeslat poptávku</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
 
 
     </div>
