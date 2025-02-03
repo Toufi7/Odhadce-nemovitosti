@@ -75,6 +75,42 @@
             max-width: 640px;
             margin: auto;
         }
+
+        /* Styling pro formulář */
+        .form-container form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-container input[type="text"], .form-container input[type="email"], .form-container input[type="tel"], .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +142,35 @@
         <p>Email: <a href="mailto:tereza@toufarova.com">tereza@toufarova.com</a></p>
         <p>Telefon: <a href="tel:+420731406935">+420 731 406 935</a></p>
         <p>Praha a střední Čechy</p>
-    </div> 
+    </div>
+
+    <div class="container" id="poptavka">
+        <h2>Pošlete nám poptávku</h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/xwpvbzlb" method="POST">
+                <label for="name">Jméno a příjmení:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefonní číslo:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Důvod odhadu:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="description">Popis nemovitosti:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="location">Lokalita:</label>
+                <input type="text" id="location" name="location" required>
+
+                <button type="submit">Odeslat poptávku</button>
+            </form>
+        </div>
+    </div>
+    
     <div class="container" id="recenze">
         <h2>Recenze zákazníků</h2>
         <div class="reviews">
