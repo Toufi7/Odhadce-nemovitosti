@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenze - Odhadce nemovitostí</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .review {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Recenze zákazníků
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="cenik.html">Ceník</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="recenze.html">Recenze</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Co o nás říkají zákazníci?</h2>
+        <div class="review">
+            <p><strong>Jana K.</strong>: Skvělý a rychlý servis. Odhad byl přesný a profesionální.</p>
+        </div>
+        <div class="review">
+            <p><strong>Martin P.</strong>: Velmi milý přístup a rychlé jednání. Doporučuji!</p>
+        </div>
+        <div class="review">
+            <p><strong>Eva L.</strong>: Profesionální a spolehlivá služba. Odhad mi pomohl při prodeji nemovitosti.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Odhadce nemovitostí
+    </footer>
+</body>
+</html>
