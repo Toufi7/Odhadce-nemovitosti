@@ -50,6 +50,14 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
+            display: flex;
+            align-items: center; /* Vertikální zarovnání */
+        }
+        .container img {
+            border-radius: 50%; /* Udělat fotku kulatou */
+            width: 120px; /* Velikost fotky */
+            height: 120px; /* Výška fotky */
+            margin-right: 20px; /* Mezera mezi fotkou a textem */
         }
         footer {
             margin-top: 20px;
@@ -73,11 +81,15 @@
     </nav>
 
     <div class="container">
-        <h2>Kontaktujte nás</h2>
-        <p><strong>Ing. Tereza Toufarová</strong></p>
-        <p>Email: <a href="mailto:tereza@toufarova.com">tereza@toufarova.com</a></p>
-        <p>Telefon: <a href="tel:+420731406935">+420 731 406 935</a></p>
-        <p>Praha a střední Čechy</p>
+        <!-- Tady bude fotka z GitHubu -->
+        <img src="https://github.com/toufi7/odhadce-nemovitost/raw/main/images/moje_fotka.jpg" alt="Tereza Toufarová">
+        <div>
+            <h2>Kontaktujte nás</h2>
+            <p><strong>Ing. Tereza Toufarová</strong></p>
+            <p>Email: <a href="mailto:tereza@toufarova.com">tereza@toufarova.com</a></p>
+            <p>Telefon: <a href="tel:+420731406935">+420 731 406 935</a></p>
+            <p>Praha a střední Čechy</p>
+        </div>
     </div>
 
     <footer>
