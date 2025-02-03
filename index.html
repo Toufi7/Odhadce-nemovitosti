@@ -109,7 +109,19 @@
     </div>
     <div class="form-container">
         <h2>Poptávkový formulář</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSdEnQ4Vp8xkdWWZKCpXYkQN0gfHQZ3za6e-f0pOc0uo31Hw/viewform?embedded=true" width="640" height="1094" frameborder="0" marginheight="0" marginwidth="0">Načítání…</iframe>
+            <form action="https://formspree.io/f/xwpvbzlb" method="POST">
+              <label for="name">Jméno a příjmení:</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+  
+              <label for="message">Důvod odhadu:</label>
+              <textarea id="message" name="message" required></textarea>
+  
+              <button type="submit">Odeslat poptávku</button>
+</form>
+
     </div>
     
     <div class="container" id="recenze">
