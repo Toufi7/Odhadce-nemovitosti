@@ -17,7 +17,6 @@
             background-color: #333;
             color: white;
             padding: 20px;
-            font-size: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -25,11 +24,25 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px; 
+            gap: 15px; /* Vzdálenost mezi logem a textem */
         }
         .logo {
-            height: 50px; 
+            height: 50px;
             width: auto;
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .main-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .sub-title {
+            font-size: 16px;
+            font-weight: normal;
+            color: #ccc; /* Světlejší barva pro menší důraz */
         }
         nav {
             background-color: #444;
@@ -131,8 +144,8 @@
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
             <div class="header-text">
-            <span class="main-title">Odhadce nemovitostí - Profesionální ocenění vašich nemovitostí</span>
-            <span class="sub-title">Ing. Tereza Toufarová</span>
+                <span class="main-title">Odhadce nemovitostí - Profesionální ocenění vašich nemovitostí</span>
+                <span class="sub-title">Ing. Tereza Toufarová</span>
             </div>
         </div>
     </header>
