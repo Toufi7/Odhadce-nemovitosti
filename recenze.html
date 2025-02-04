@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ece9e6, #ffffff);
+            background: linear-gradient(to right, #f5f5f5, #ffffff);
             text-align: center;
         }
         header {
@@ -43,7 +43,7 @@
         }
         .container {
             width: 90%;
-            max-width: 700px;
+            max-width: 900px;
             margin: auto;
             background: white;
             padding: 20px;
@@ -53,10 +53,19 @@
         }
         .review {
             background: #f9f9f9;
-            padding: 15px;
-            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-left: 5px solid #28a745;
             margin-bottom: 15px;
             border-radius: 5px;
+            text-align: left;
+        }
+        .review strong {
+            font-size: 18px;
+        }
+        .stars {
+            color: #FFD700;
+            font-size: 16px;
+            margin-top: 5px;
         }
         footer {
             margin-top: 20px;
@@ -82,18 +91,39 @@
     <div class="container">
         <h2>Co o nás říkají zákazníci?</h2>
         <div class="review">
-            <p><strong>Jana K.</strong>: Skvělý a rychlý servis. Odhad byl přesný a profesionální.</p>
+            <strong>Jana K.</strong>
+            <div class="stars">★★★★★</div>
+            <p>Skvělý a rychlý servis. Odhad byl přesný a profesionální.</p>
         </div>
         <div class="review">
-            <p><strong>Martin P.</strong>: Velmi milý přístup a rychlé jednání. Doporučuji!</p>
+            <strong>Martin P.</strong>
+            <div class="stars">★★★★★</div>
+            <p>Velmi milý přístup a rychlé jednání. Doporučuji!</p>
         </div>
         <div class="review">
-            <p><strong>Eva L.</strong>: Profesionální a spolehlivá služba. Odhad mi pomohl při prodeji nemovitosti.</p>
+            <strong>Eva L.</strong>
+            <div class="stars">★★★★☆</div>
+            <p>Profesionální a spolehlivá služba. Odhad mi pomohl při prodeji nemovitosti.</p>
+        </div>
+        <div class="review">
+            <strong>Petr S.</strong>
+            <div class="stars">★★★★★</div>
+            <p>Vše proběhlo hladce, odhad přesně odpovídal realitě. Doporučuji všem!</p>
+        </div>
+        <div class="review">
+            <strong>Lucie D.</strong>
+            <div class="stars">★★★★☆</div>
+            <p>Trochu delší čekací doba, ale kvalita odhadu byla skvělá.</p>
+        </div>
+        <div class="review">
+            <strong>Tomáš B.</strong>
+            <div class="stars">★★★★★</div>
+            <p>Odborný přístup a skvělá komunikace. Rád využiji službu znovu.</p>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 Odhadce nemovitostí
+        &copy; 2025 Odhadce nemovitostí - Ing. Tereza Toufarová
     </footer>
 </body>
 </html>
