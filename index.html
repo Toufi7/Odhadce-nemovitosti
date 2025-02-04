@@ -18,6 +18,18 @@
             color: white;
             padding: 20px;
             font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+        .logo {
+            height: 50px; 
+            width: auto;
         }
         nav {
             background-color: #444;
@@ -75,8 +87,6 @@
             max-width: 640px;
             margin: auto;
         }
-
-        /* Styling pro formulář */
         .form-container form {
             background: #fff;
             padding: 20px;
@@ -89,7 +99,10 @@
             color: #333;
             font-weight: bold;
         }
-        .form-container input[type="text"], .form-container input[type="email"], .form-container input[type="tel"], .form-container textarea {
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="tel"], 
+        .form-container textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
@@ -115,7 +128,10 @@
 </head>
 <body>
     <header>
-        Odhadce nemovitostí - Profesionální ocenění vašich nemovitostí
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span>Odhadce nemovitostí - Profesionální ocenění vašich nemovitostí</span>
+        </div>
     </header>
     <nav>
         <ul>
