@@ -24,7 +24,7 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 15px; /* Vzdálenost mezi logem a textem */
         }
         .logo {
             height: 50px;
@@ -42,7 +42,7 @@
         .sub-title {
             font-size: 16px;
             font-weight: normal;
-            color: #ccc;
+            color: #ccc; /* Světlejší barva pro menší důraz */
         }
         nav {
             background-color: #444;
@@ -67,47 +67,6 @@
             text-decoration: none;
             font-size: 18px;
         }
-        .intro {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            text-align: left;
-        }
-        .intro h1 {
-            font-size: 26px;
-            color: #333;
-            text-align: center;
-        }
-        .intro h2 {
-            font-size: 22px;
-            color: #444;
-            margin-top: 20px;
-        }
-        .intro p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-        .intro ul {
-            list-style: none;
-            padding: 0;
-        }
-        .intro ul li {
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 10px;
-        }
-        .intro ul li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-        }
         .container {
             width: 90%;
             max-width: 500px;
@@ -118,11 +77,65 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
+        .reviews, .pricing {
+            max-width: 700px;
+            margin: auto;
+            text-align: left;
+        }
+        .review {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
         footer {
             margin-top: 20px;
             padding: 10px;
             background: #333;
             color: white;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 640px;
+            margin: auto;
+        }
+        .form-container form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="tel"], 
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -144,21 +157,6 @@
             <li><a href="recenze.html">Recenze</a></li>
         </ul>
     </nav>
-
-    <div class="intro">
-        <h1>Odhad nemovitosti – profesionální služby pro vaše potřeby</h1>
-        <p>Jsem odborný odhadce nemovitostí a nabízím profesionální ocenění nemovitostí pro jednotlivce, firmy i instituce...</p>
-        <h2>Co je odhad nemovitosti a proč ho potřebujete?</h2>
-        <p>Odhad nemovitosti je odborné stanovení její aktuální tržní hodnoty...</p>
-        <h2>Jak probíhá odhad?</h2>
-        <ul>
-            <li><strong>Prvotní konzultace</strong> – zjistím vaše požadavky a účel ocenění.</li>
-            <li><strong>Sběr dat</strong> – prohlédnu nemovitost a zhodnotím její stav...</li>
-            <li><strong>Analýza trhu</strong> – porovnám podobné nemovitosti...</li>
-            <li><strong>Vypracování odhadu</strong> – připravím odborný dokument...</li>
-        </ul>
-        <p><strong>Chcete zjistit hodnotu své nemovitosti? Kontaktujte mě a ráda vám pomohu!</strong></p>
-    </div>
 
     <div class="container" id="poptavka">
         <h2>Pošlete nám poptávku</h2>
